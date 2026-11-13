@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shihab — Portfolio</title>
+  <meta name="description" content="Portfolio of Shihab — student in Tokyo learning web development, C programming and cyber security." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="grid-bg" aria-hidden="true"></canvas>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#home" class="logo">
+      <span class="logo-mark">&gt;_</span> shihab<span class="blink">.</span>
+    </a>
+    <nav class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact" class="btn btn-sm">Let's Talk</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="tag"><span class="dot"></span> SYSTEM ONLINE · TOKYO, JAPAN</p>
+        <h1>
+          <span class="muted">Hi, I'm</span> Shihab<br />
+          <span class="typed-wrap">I <span id="typed"></span><span class="caret">|</span></span>
+        </h1>
+        <p class="lead">
+          A student at Daiichi Institute of Technology in Tokyo, learning to
+          build for the web and exploring how systems are kept secure. I care
+          about clean code and interfaces that feel good to use.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+
+        <div class="terminal" aria-label="Quick info">
+          <div class="term-bar"><i></i><i></i><i></i><span>shihab@portfolio:~</span></div>
+          <pre id="terminal-body"></pre>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="radar">
+          <div class="ring r1"></div>
+          <div class="ring r2"></div>
+          <div class="ring r3"></div>
+          <div class="sweep"></div>
+          <div class="hex">
+            <!-- Put your photo at assets/profile.jpg — initials show if it's missing -->
+            <img src="assets/profile.jpg" alt="Shihab" onerror="this.remove()" />
+            <span class="initials">S</span>
+          </div>
+          <div class="blip b1"></div>
+          <div class="blip b2"></div>
+          <div class="blip b3"></div>
+        </div>
+        <div class="float-card fc1"><b>東京</b><span>Based in Tokyo</span></div>
+        <div class="float-card fc2"><b>C</b><span>Current focus</span></div>
+        <div class="float-card fc3"><span class="dot"></span><span>Always learning</span></div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="section">
+      <p class="eyebrow"><span>01</span> About Me</p>
+      <h2><span class="muted">Privacy is a right,</span> good code is a habit.</h2>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm Shihab, a student at 第一工科大学 (Daiichi Institute of Technology)
+            in Tokyo. At university I'm studying C programming, web design and
+            information processing — and studying Japanese along the way.
+          </p>
+          <p>
+            Outside class I spend my time on Linux and cyber security, keeping
+            notes on what I learn and building small projects like this
+            portfolio. I like work where design, engineering and safety meet.
+          </p>
+          <ul class="facts">
+            <li><span>Location</span>Tokyo, Japan</li>
+            <li><span>University</span>第一工科大学</li>
+            <li><span>Focus</span>Web · C · Cyber Security</li>
+            <li><span>Languages</span>Bangla · English · 日本語</li>
+          </ul>
+        </div>
+        <div class="stats reveal">
+          <div class="stat"><b>C</b><span>Strings &amp; pointers</span></div>
+          <div class="stat"><b>Web</b><span>Web design</span></div>
+          <div class="stat"><b>Linux</b><span>Kali &amp; the terminal</span></div>
+          <div class="stat"><b>日本語</b><span>Every day</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ INTERESTS ============ -->
+    <section id="interests" class="section">
+      <p class="eyebrow"><span>02</span> Interests</p>
+      <h2><span class="muted">What</span> I'm into</h2>
+      <div class="services">
+        <article class="service reveal">
+          <div class="icon">&lt;/&gt;</div>
+          <h3>Web Development</h3>
+          <p>Building responsive websites with HTML, CSS and JavaScript — like the one you're looking at.</p>
+          <span class="idx">/01</span>
+        </article>
+        <article class="service reveal">
+          <div class="icon">⛨</div>
+          <h3>Cyber Security</h3>
+          <p>Learning how attacks work so I can build safer systems, with Kali Linux as my playground.</p>
+          <span class="idx">/02</span>
+        </article>
+        <article class="service reveal">
+          <div class="icon">C</div>
+          <h3>C Programming</h3>
+          <p>Getting solid on the fundamentals: macros, characters, strings and pointers.</p>
+          <span class="idx">/03</span>
+        </article>
+        <article class="service reveal">
+          <div class="icon">◈</div>
+          <h3>UI Design</h3>
+          <p>Clean, accessible interfaces with care for layout, type and the small details.</p>
+          <span class="idx">/04</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section id="skills" class="section">
+      <p class="eyebrow"><span>03</span> Skills</p>
+      <h2><span class="muted">Scanning</span> my toolkit…</h2>
+      <div class="chips reveal">
+        <span>C</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+        <span>Linux</span><span>Kali Linux</span><span>Git</span><span>GitHub</span>
+        <span>Google Colab</span><span>VS Code</span>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section id="projects" class="section">
+      <p class="eyebrow"><span>04</span> Projects</p>
+      <h2><span class="muted">Things</span> I've built</h2>
+      <div class="filters" role="tablist">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="web">Web</button>
+        <button class="filter" data-filter="security">Security</button>
+        <button class="filter" data-filter="c">C</button>
+      </div>
+      <div class="projects">
+        <article class="project reveal" data-cat="web">
+          <div class="thumb t1"><span>Portfolio</span></div>
+          <div class="p-body">
+            <div class="p-tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
+            <h3>Portfolio Website</h3>
+            <p>This site — a dark cyber-terminal theme with a radar hero, typing terminal and responsive layout.</p>
+            <a href="https://github.com/shihabditu/portfolio" class="p-link" target="_blank" rel="noopener">View code →</a>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="security">
+          <div class="thumb t2"><span>Kali</span></div>
+          <div class="p-body">
+            <div class="p-tags"><span>Linux</span><span>Notes</span></div>
+            <h3>Kali Linux Commands</h3>
+            <p>My collection of Kali Linux commands, built up as I learn.</p>
+            <a href="https://github.com/shihabditu/kali_linux_commands" class="p-link" target="_blank" rel="noopener">View repo →</a>
+          </div>
+        </article>
+        <article class="project reveal" data-cat="c">
+          <div class="thumb t4"><span>C</span></div>
+          <div class="p-body">
+            <div class="p-tags"><span>C</span><span>University</span></div>
+            <h3>C Language Exercises</h3>
+            <p>Weekly university exercises on macros, characters, strings and pointers.</p>
+            <span class="p-link muted-link">In progress</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ JOURNEY ============ -->
+    <section id="journey" class="section">
+      <p class="eyebrow"><span>05</span> Journey</p>
+      <h2><span class="muted">My</span> journey so far</h2>
+      <ol class="timeline">
+        <li class="reveal">
+          <time>Next</time>
+          <div><h3>Build &amp; share more</h3><p>More projects, more notes — and putting them on GitHub as I go.</p></div>
+        </li>
+        <li class="reveal">
+          <time>Now</time>
+          <div><h3>Launched this portfolio</h3><p>Designed and published my personal site.</p></div>
+        </li>
+        <li class="reveal">
+          <time>2026</time>
+          <div><h3>Learning C programming</h3><p>Working through strings, string manipulation and pointers in class.</p></div>
+        </li>
+        <li class="reveal">
+          <time>2026</time>
+          <div><h3>Student at 第一工科大学</h3><p>Studying in Tokyo, Japan.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section id="contact" class="section">
+      <p class="eyebrow"><span>06</span> Contact</p>
+      <h2><span class="muted">Let's</span> work together.</h2>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <p>Have an idea, a project or just want to say hi? Reach out on LinkedIn — I'd love to connect.</p>
+          <a class="contact-line" href="https://github.com/shihabditu" target="_blank" rel="noopener"><span>GitHub</span>github.com/shihabditu</a>
+          <a class="contact-line" href="https://www.linkedin.com/in/shihab-ditu-0550b4421/" target="_blank" rel="noopener"><span>LinkedIn</span>linkedin.com/in/shihab-ditu-0550b4421</a>
+        </div>
+        <div class="terminal contact-term reveal">
+          <div class="term-bar"><i></i><i></i><i></i><span>contact.sh</span></div>
+          <pre><span class="p">$ </span>contact --github
+<span class="v">→ github.com/shihabditu</span>
+<span class="p">$ </span>contact --linkedin
+<span class="v">→ linkedin.com/in/shihab-ditu-0550b4421</span>
+<span class="p">$ </span>status
+<span class="v">● open to connect</span></pre>
+          <a class="btn contact-btn" href="https://www.linkedin.com/in/shihab-ditu-0550b4421/" target="_blank" rel="noopener">Connect on LinkedIn ↵</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a href="#home" class="logo"><span class="logo-mark">&gt;_</span> shihab<span class="blink">.</span></a>
+    <p>© <span id="year"></span> Shihab. Built with care in Tokyo.</p>
+    <a href="#home" class="to-top" aria-label="Back to top">↑</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
